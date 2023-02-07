@@ -13,20 +13,34 @@ Use issubclass() to check class inheritance: issubclass(bool, int) is True since
 In this project, I learnt:
 
 • Why Python programming is awesome
+
 • What is a superclass, baseclass or parentclass
+
 • What is a subclass
+
 • How to list all attributes and methods of a class or instance
+
 • When can an instance have new attributes
+
 • How to inherit class from another
+
 • How to define a class with multiple base classes
+
 • What is the default class every class inherit from
+
 • How to override a method or attribute inherited from the base class
+
 • Which attributes or methods are available by heritage to subclasses
+
 • What is the purpose of inheritance
+
 • What are, when and how to use isinstance, issubclass, type and super built-in functions
+
 
 Resources
 
 [python documentation](https://docs.python.org/3/tutorial/classes.html#inheritance).
+
 [analyticsvidhya.com](https://www.analyticsvidhya.com/blog/2020/10/inheritance-object-oriented-programming).
+
 [youtube](https://youtu.be/d8kCdLCi6Lk).
