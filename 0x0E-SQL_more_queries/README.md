@@ -5,14 +5,14 @@
 ## At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
 ## General
-* **How to create a new MySQL user
-* **How to manage privileges for a user to a database or table
-* **What’s a PRIMARY KEY
-* **What’s a FOREIGN KEY
-* **How to use NOT NULL and UNIQUE constraints
-* **How to retrieve datas from multiple tables in one request
-* **What are subqueries
-* **What are JOIN and UNION
+* How to create a new MySQL user
+* How to manage privileges for a user to a database or table
+* What’s a PRIMARY KEY
+* What’s a FOREIGN KEY
+* How to use NOT NULL and UNIQUE constraints
+* How to retrieve datas from multiple tables in one request
+* What are subqueries
+* What are JOIN and UNION
 
 ## Tasks :page_with_curl:
 
@@ -49,52 +49,52 @@
 * **7. Cities table**
   * [7-cities.sql](./7-cities.sql): MySQL script that creates the database `hbtn_0d_usa` and the table `cities` (in the database `hbtn_0d_usa`) on your `MySQL server`.
   * `cities`: Description:
-    * `id` = `INT unique, auto generated, can’t be null and is a primary key`
-    * `state_id` = `INT, can’t be null and must be a FOREIGN KEY that references to id of the states table`
-    * `name` = `VARCHAR(256) can’t be null`
+    * `id` = INT unique, auto generated, can’t be null and is a primary key
+    * `state_id` = INT, can’t be null and must be a FOREIGN KEY that references to id of the states table
+    * `name` = VARCHAR(256) can’t be null
 
 * **8. Cities of California**
   * [8-cities_of_california_subquery.sql](./8-cities_of_california_subquery.sql): MySQL script that lists all the cities of California that can be found in the database `hbtn_0d_usa`.
-  * `The `states` table contains only one record where `name` = `California` (but the `id` can be different, as per the example)`
-  * `Results must be sorted in ascending order by `cities.id``
-  * `You are not allowed to use the `JOIN` keyword``
-  * `The database name will be passed as an argument of the `mysql` command``
+  * The `states` table contains only one record where `name` = `California` (but the `id` can be different, as per the example)
+  * Results must be sorted in ascending order by `cities.id`
+  * You are not allowed to use the `JOIN` keyword
+  * The database name will be passed as an argument of the `mysql` command
 
 * **9. Cities by States**
   * [9-cities_by_state_join.sql](./9-cities_by_state_join.sql): MySQL script that lists all cities contained in the database `hbtn_0d_usa``.
   * Description:
-    * `Each record should display: `cities.id` - `cities.name` - `states.name``
-    * `Results must be sorted in ascending order by `cities.id``
-    * `You can use only one `SELECT` statement``
-    * `The database name will be passed as an argument of the `mysql` command`
+    * Each record should display: `cities.id` - `cities.name` - `states.name`
+    * Results must be sorted in ascending order by `cities.id`
+    * You can use only one `SELECT` statement
+    * The database name will be passed as an argument of the `mysql` command
 
 * **10. Genre ID by show**
-  * [10-genre_id_by_show.sql](./10-genre_id_by_show.sql): Import the database dump from `hbtn_0d_tvshows` to your MySQL server: `download``.
+  * [10-genre_id_by_show.sql](./10-genre_id_by_show.sql): Import the database dump from `hbtn_0d_tvshows` to your MySQL server: `download`.
 
-  * MySQL script that lists all shows contained in `hbtn_0d_tvshows` that have at least one genre linked`.
+  * MySQL script that lists all shows contained in `hbtn_0d_tvshows` that have at least one genre linked.
   * Description: 
-    * `Each record should display: `tv_shows.title` - `tv_show_genres.genre_id``
-    * `Results must be sorted in ascending order by `tv_shows.title` and `tv_show_genres.genre_id``
-    * `You can use only one `SELECT` statement`
-    * `The database name will be passed as an argument of the `mysql` command`
+    * Each record should display: `tv_shows.title` - `tv_show_genres.genre_id`.
+    * Results must be sorted in ascending order by `tv_shows.title` and `tv_show_genres.genre_id`.
+    * You can use only one `SELECT` statement.
+    * The database name will be passed as an argument of the `mysql` command.
 
 * **11. Genre ID for all shows**
-  * [11-genre_id_all_shows.sql](./11-genre_id_all_shows.sql): `Import the database dump of `hbtn_0d_tvshows` to your MySQL server: `download` (same as `10-genre_id_by_show.sql`)`.
+  * [11-genre_id_all_shows.sql](./11-genre_id_all_shows.sql): Import the database dump of `hbtn_0d_tvshows` to your MySQL server: `download` (same as `10-genre_id_by_show.sql`).
   * MySQL script that lists all shows contained in the database `hbtn_0d_tvshows`.
   * Description:
-    * `Each record should display: `tv_shows.title` - `tv_show_genres.genre_id``.
-    * `Results must be sorted in ascending order by `tv_shows.title` and `tv_show_genres.genre_id``
-    * `If a show doesn’t have a genre, display `NULL``
-    * `You can use only one `SELECT` statement``
-    * `The database name will be passed as an argument of the `mysql` command`
+    * Each record should display: `tv_shows.title` - `tv_show_genres.genre_id`.
+    * Results must be sorted in ascending order by `tv_shows.title` and `tv_show_genres.genre_id`.
+    * If a show doesn’t have a genre, display `NULL`.
+    * You can use only one `SELECT` statement.
+    * The database name will be passed as an argument of the `mysql` command.
 
 * **12. No genre**
-  * [12-no_genre.sql](./12-no_genre.sql): `Import the database dump from `hbtn_0d_tvshows` to your MySQL server: `download` (same as `11-genre_id_all_shows.sql`).
+  * [12-no_genre.sql](./12-no_genre.sql): Import the database dump from `hbtn_0d_tvshows` to your MySQL server: `download` (same as `11-genre_id_all_shows.sql`).
   * MySQL script that lists all shows contained in `hbtn_0d_tvshows` without a genre linked.
   * Description:
-    * `Each record should display: `tv_shows.title` - `tv_show_genres.genre_id``
-    * `Results must be sorted in ascending order by `tv_shows.title` and `tv_show_genres.genre_id``
-    * `You can use only one `SELECT` statement```
-    * `The database name will be passed as an argument of the `mysql` command``.
+    * Each record should display: `tv_shows.title` - `tv_show_genres.genre_id`
+    * Results must be sorted in ascending order by `tv_shows.title` and `tv_show_genres.genre_id`.
+    * You can use only one `SELECT` statement.
+    * The database name will be passed as an argument of the `mysql` command.
 
 * **13. 
