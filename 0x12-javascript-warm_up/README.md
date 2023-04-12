@@ -39,6 +39,21 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 - How to import a file
 
 ## Requirements
+
+- [Writing JavaScript Code](https://intranet.alxswe.com/rltoken/3HLjEesLsmyWfRUWnxgUGg)
+- [Variables](https://intranet.alxswe.com/rltoken/zgOWmcpVLZFEmFlmuwayyg)
+- [Data Types](https://intranet.alxswe.com/rltoken/VPd6JWaLrwOBzjAeXNAEqg)
+- [Operators](https://intranet.alxswe.com/rltoken/3HLjEesLsmyWfRUWnxgUGg)
+- [Operator Precedence](https://intranet.alxswe.com/rltoken/PHtcJJk30gBNmlFQ9R4RVg)
+- [Controlling Program Flow](https://intranet.alxswe.com/rltoken/tsreKcNh_KmTmLPHsfvJRw)
+- [Functions](https://intranet.alxswe.com/rltoken/e3EfHIxICdIncGBwwIDbXQ)
+- [Objects and Arrays](https://intranet.alxswe.com/rltoken/jg7IbvJpV2oLIKgqOAQH1g)
+- [Intrinsic Objects](https://intranet.alxswe.com/rltoken/jg7IbvJpV2oLIKgqOAQH1g)
+- [Module patterns](https://intranet.alxswe.com/rltoken/jg7IbvJpV2oLIKgqOAQH1g)
+- [var, let and const](https://intranet.alxswe.com/rltoken/gJi61GeJTRX0g-M0Rx-0Iw)
+- [JavaScript Tutorial](https://intranet.alxswe.com/rltoken/Y8hkOcy5jO22lQGyF6_NiA)
+- [Modern JS](https://intranet.alxswe.com/rltoken/NZawtiBjWUpiojnrtVywNw)
+
 ### General
 - Allowed editors: vi, vim, emacs
 - All your files will be interpreted on Ubuntu 20.04 LTS using node (version 14.x)
@@ -55,11 +70,64 @@ You will not be able to meet the objectives of this or any following project by 
 
 ## Tasks
 ### 0. First constant, first print
-mandatory
-Score: 0.0% (Checks completed: 0.0%)
-Write a script that prints “JavaScript is amazing”:
+Write a script that prints `“JavaScript is amazing”`:
 
-- You must create a constant variable called myVar with the value “JavaScript is amazing”
-- You must use console.log(...) to print all output
-- You are not allowed to use var
+- You must create a constant variable called myVar with the value `“JavaScript is amazing”`
+- You must use `console.log(...)` to print all output
+- You are not allowed to use `var`
 
+### 1. 3 languages
+Write a script that prints 3 lines:
+
+- The first line: `“C is fun”`
+- The second line: `“Python is cool”`
+- The third line: `“JavaScript is amazing”`
+- You must use `console.log(...)` to print all output
+- You are not allowed to use `var`
+
+### 2. Arguments
+Write a script that prints a message depending of the number of arguments passed:
+
+- If no arguments are passed to the script, print `“No argument”`
+- If only one argument is passed to the script, print `“Argument found”`
+- Otherwise, print `“Arguments found”`
+- You must use `console.log(...)` to print all output
+- You are not allowed to use `var`
+- Reference: `process.argv`
+
+`NB:`
+The script first uses the `slice()` method to create a new array args that contains only the command-line arguments (i.e., it excludes the first two elements of process.argv). It then checks the length of this array to determine how many arguments were passed.
+
+If args has `length 0`, it means no arguments were passed, so the script prints `"No argument"` using `console.log()`. If args has `length 1`, it means one argument was passed, so the script prints `"Argument found"`. Otherwise, it prints `"Arguments found"`.
+
+### 3. Value of my argument
+Write a script that prints the first argument passed to it:
+
+- If no arguments are passed to the script, print `“No argument”`
+- You must use `console.log(...)` to print all output
+- You are not allowed to use `var`
+- You are not allowed to use `length`
+## solution
+This script takes in a command line argument and outputs it. If no argument is passed, it outputs `"No argument"`. Here are some examples:
+
+`vagrant@ubuntu-focal:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./3-value_argument.js `
+`No argument`
+`vagrant@ubuntu-focal:~/alx-higher_level_programming/0x12-javascript-warm_up$ ./3-value_argument.js School`
+`School`
+`vagrant@ubuntu-focal:~/alx-higher_level_programming/0x12-javascript-warm_up$`
+
+### 4. Create a sentence
+Write a script that prints two arguments passed to it, in the following format: `“ is ”`
+
+- You must use `console.log(...)` to print all output
+- You are not allowed to use `var`
+
+### 5. An Integer
+Write a script that prints `My number`: <first argument converted in integer> if the first argument can be converted to an integer:
+
+- If the argument can’t be converted to an integer, print “Not a number”
+- You must use `console.log(...)` to print all output
+- You are not allowed to use `var`
+- You are not allowed to use `try/catch`
+
+### 6.  
