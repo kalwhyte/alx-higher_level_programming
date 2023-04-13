@@ -1,0 +1,66 @@
+### `Task 0:`
+Write an empty class Rectangle that defines a rectangle:
+
+You must use the class notation for defining your class
+
+#!/usr/bin/node
+
+class Rectangle {
+}
+
+module.exports = Rectangle;
+
+This code defines a Rectangle class using the class keyword in JavaScript, and exports it so it can be used in other files. The Rectangle class is empty, meaning it doesn't have any properties or methods defined in it.
+
+To run the code, create a file named 0-rectangle.js in the same directory and paste the code in it. Then create a file named 0-main.js and write the following code in it:
+
+#!/usr/bin/node
+const Rectangle = require('./0-rectangle');
+
+const r1 = new Rectangle();
+console.log(r1);
+console.log(r1.constructor);
+
+This code requires the Rectangle class from the 0-rectangle.js file, creates an instance of it, and logs the instance and its constructor to the console.
+
+To run the code, execute the following command in the terminal:
+
+`./0-main.js`
+
+This should output:
+
+Rectangle {}
+[Class: Rectangle]
+
+### `Task 2:`
+### `Task 5:`
+This code defines a class Square that inherits from the Rectangle class defined in 4-rectangle.js. The Square class takes one argument in the constructor, size, and passes it to the Rectangle constructor along with another size argument (since Rectangle takes two arguments for width and height).
+
+Since the Square class inherits from Rectangle, it can use the print(), rotate(), and double() instance methods that are defined in Rectangle
+
+### `Task 6:`
+The instruction "inherits from Square of 5-square.js" doesn't make sense because there is no "Square" class defined in "5-square.js". Assuming that the instruction is meant to be "inherits from Rectangle of 4-rectangle.js", you can define the class Square as follows:
+
+`const Rectangle = require('./4-rectangle');`
+
+`class` Square `extends` Rectangle {
+  constructor(size) {
+    super(size, size);
+  }
+
+  charPrint(c) {
+    `if` (!c) {
+      c = 'X';
+    }
+    `let` square = '';
+    `for` (`let` i = `0`; i < `this.height`; i++) {
+      square += `c.repeat``(this.width)` + '\n';
+    }
+    `console.log(square)`;
+  }
+}
+
+`module.exports = Square;`
+
+This defines the Square class that inherits from Rectangle and sets the width and height to the same value. It also defines a `charPrint()` method that takes an optional character c and prints a square using that character. If c is not defined, it defaults to 'X'. The `charPrint()` method works by repeating the character c for `this.width` number of times and concatenating the resulting string `this.height` number of times. The result is then logged to the console using `console.log()`.
+
