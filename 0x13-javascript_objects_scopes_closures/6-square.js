@@ -1,19 +1,14 @@
-const Rectangle = require('./4-rectangle');
+#!/usr/bin/node
+const OldSquare = require('./5-square');
 
-class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
-  }
-
+class Square extends OldSquare {
   charPrint (c) {
-    if (!c) {
+    if (c === undefined) {
       c = 'X';
     }
-    let square = '';
     for (let i = 0; i < this.height; i++) {
-      square += c.repeat(this.width) + '\n';
+      console.log(c.repeat(this.width));
     }
-    console.log(square);
   }
 }
 
