@@ -33,8 +33,19 @@ Rectangle {}
 [Class: Rectangle]
 
 ### `Task 2:`
+
+### `Task 4:`
+This code creates a class `Rectangle` with a constructor that takes two arguments `w` and `h`. It initializes the instance attributes `width` and `height` with the values of `w` and `h`, respectively. If `w` or `h` is equal to `0` or not a positive integer, it creates an empty object.
+
+The class also has three instance methods:
+
+- `print()`: which prints the rectangle using the character `X`.
+- `rotate()`: which exchanges the width and the height of the rectangle.
+- `double()`: which multiples the width and the height of the rectangle by 2.
+The `4-main.js` script imports the `Rectangle` class and creates a new instance `r1` with the arguments `2` and `3`. It then calls the `print()` method on the `r1` object and prints the resulting rectangle. It then calls the `double()` method on the `r1` object, followed by a call to `print()` method to print the new rectangle. Finally, it calls the `rotate()` method on the `r1` object and calls `print()` method to print the updated rectangle.
+
 ### `Task 5:`
-This code defines a class Square that inherits from the Rectangle class defined in 4-rectangle.js. The Square class takes one argument in the constructor, size, and passes it to the Rectangle constructor along with another size argument (since Rectangle takes two arguments for width and height).
+This code defines a class `Square` that inherits from the `Rectangle` class defined in `4-rectangle.js`. The `Square` class takes one argument in the `constructor`, `size`, and `passes` it to the `Rectangle` constructor along with another size argument (since `Rectangle` takes two arguments for `width` and `height`).
 
 Since the Square class inherits from Rectangle, it can use the print(), rotate(), and double() instance methods that are defined in Rectangle
 
