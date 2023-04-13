@@ -1,6 +1,6 @@
-let numArgs = 0;
+let count = 0;
 
 exports.logMe = function (item) {
-  console.log(`${numArgs}: ${item}`);
-  numArgs++;
+  console.log(`${count}: ${item}`);
+  count++;
 };
