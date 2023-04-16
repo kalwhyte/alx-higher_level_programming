@@ -5,23 +5,10 @@ import MySQLdb
 import sys
 
 if __name__ == '__main__':
-    # Connection parameters
-    db_user = sys.argv[1]
-    db_passwd = sys.argv[2]
-    db_name = sys.argv[3]
-
-    # Connect to database
-    db = MySQLdb.connect(user=db_user, passwd=db_passwd, db=db_name)
-    cursor = db.cursor()
-
-    # Execute query
-    cursor.execute("""SELECT * FROM states WHERE name LIKE 'N%' ORDER BY 'id'""")
-    rows = cursor.fetchall()
-
-    # Print results
-    for row in rows:
-        print(row)
-
-    # Close cursor and database
-    cursor.close()
-    db.close()
+    db_connection = MySQLdb.connect(
+        user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3]
+    )
+    cursor = db_connection.cursor()
+    cursor.execute("SELECT * FROM `states` ORDER BY `id`")
+    states = cursor.fetchall()
+    [print(state) for state in states if state[1][0] == "N"]
