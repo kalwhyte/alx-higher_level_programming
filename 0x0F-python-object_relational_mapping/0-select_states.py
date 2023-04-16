@@ -14,13 +14,7 @@ if __name__ == "__main__":
                          db=sys.argv[3])
     
     cursor = db.cursor()
-    
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
-    
-    data = cursor.fetchall()
-    
-    for row in data:
-        print(row)
-    
+    cursor.execute("SELECT * FROM `states`")
+    [print(state) for state in cursor.fetchall()]
     cursor.close()
     db.close()
