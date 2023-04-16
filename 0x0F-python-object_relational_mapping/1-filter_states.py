@@ -11,15 +11,11 @@ if __name__ == '__main__':
     db_name = sys.argv[3]
 
     # Connect to database
-    db = MySQLdb.connect(user=db_user,
-                         passwd=db_passwd,
-                         db=db_name,
-                         port=3306,
-                         host='localhost')
+    db = MySQLdb.connect(user=db_user, passwd=db_passwd, db=db_name)
     cursor = db.cursor()
 
     # Execute query
-    cursor.execute("""SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC""")
+    cursor.execute("""SELECT * FROM states WHERE name LIKE 'N%' ORDER BY 'id'""")
     rows = cursor.fetchall()
 
     # Print results
