@@ -9,8 +9,8 @@ Usage: ./100-relationship_states_cities.py <mysql username> /
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from relationship_state import State, Base
-from relationship_city import City
+from relationship_state import State
+from relationship_city import Base, City
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
@@ -20,10 +20,5 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    new_state = State(name="California")
-    new_city = City(name="San Francisco")
-    new_state.cities.append(new_city)
-
-    session.add(new_state)
-    session.add(new_city)
+    session.add(City(name="San Francisco", state=State(name="California")))
     session.commit()
