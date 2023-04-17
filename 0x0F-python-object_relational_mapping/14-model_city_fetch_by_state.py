@@ -13,16 +13,13 @@ from model_city import City
 
 
 if __name__ == "__main__":
-    # Set up connection to the database
-    user = sys.argv[1]
-    password = sys.argv[2]
-    db_name = sys.argv[3]
-    engine = create_engine(f'mysql+mysqldb://{user}:{password}@localhost/{db_name}')
-    Base.metadata.create_all(engine)
-    session = sessionmaker(bind=engine)()
+    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}"
+                           .format(sys.argv[1], sys.argv[2], sys.argv[3]),
+                           pool_pre_ping=True)
+    Session = sessionmaker(bind=engine)
+    session = Session()
 
-    # Query the database and print results
-    query = session.query(City, State).filter(City.state_id == State.id).order_by(City.id)
-    for city, state in query.all():
-        print(f"{state.name}: ({city.id}) {city.name}")
-    session.close()
+    for city, state in session.query(City, State) \
+                              .filter(City.state_id == State.id) \
+                              .order_by(City.id):
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
