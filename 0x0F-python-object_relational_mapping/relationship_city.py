@@ -17,7 +17,7 @@ class City(Base):
         name (sqlalchemy.Column): The city's name.
         state_id (sqlalchemy.Column): The city's state id.
     """
-    __tablename__ = 'cities'
+    __tablename__ = "cities"
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
     stateId = Column(Integer, ForeignKey("states.id"), nullable=False)
