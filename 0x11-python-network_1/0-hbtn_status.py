@@ -29,9 +29,10 @@ def display_info(response):
         response: A bytes object representing the body of the HTTP response.
     """
     body = response.decode("utf-8")
-    print("- type: {}".format(type(body)))
-    print("- content: {}".format(body))
-    print("- utf8 content: {}".format(body))
+    print("Body response:")
+    print("\t- type: {}".format(type(response)))
+    print("\t- content: {}".format(response))
+    print("\t- utf8 content: {}".format(body))
 
 
 if __name__ == "__main__":
